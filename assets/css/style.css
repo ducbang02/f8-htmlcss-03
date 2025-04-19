@@ -6,6 +6,277 @@ html {
     font-size: 62.5%;
 }
 
+:root {
+    --primary-color: #2E80CE;
+    --background-color: #10375C;
+    --font-color-p1: #575F66;
+    --font-color-p2: #C9D2DA;
+}
+
 body {
     font-size: 1.6rem;
+    font-weight: 300;
+    font-family: "Sora", sans-serif;
 }
+
+/* Common */
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-heading {
+    color: var(--background-color);
+    font-family: Sora;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.desc {
+    color: var(--font-color-p1);
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.67;
+    text-align: center;
+}
+
+.desc.desc-info {
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.btn {
+    --height: 60px;
+    display: inline-block;
+    min-width: 205px;
+    height: var(--height);
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);    
+    color: #FFF;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: var(--height);
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+/* =============== Header ============= */
+
+header {
+    background-color: var(--background-color);
+}
+
+.body-header {
+    padding: 30px 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fixed {
+    position: sticky;
+    top: -12px;
+    z-index: 1;
+}
+
+.nav {
+    display: flex;
+}
+
+.body-header a {
+    color: var(--font-color-p2);
+}
+
+.nav .navbar-link {
+    position: relative;
+    padding: 12px 21px;
+}
+
+.nav .navbar-link.active, .nav .navbar-link:hover{
+    color: white;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.nav .active::before {
+    position: relative;
+    top: -2px;
+    left: -8px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.body-header .cta {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.body-header .cta .btn-signup{
+    --height: 44px;
+    min-width: 104px;
+    height: var(--height);
+    border-radius: 22px;
+    background: var(--primary-color);
+
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: var(--height);
+}
+
+/*==================== Hero ===============*/
+
+.hero-wrap {
+    height: calc(100vh - 86px);
+    background-color: var(--background-color);
+    padding: 64px 0 0;
+}
+
+.hero-wrap .hero-body {
+    display: flex;
+    align-items: center;
+}
+
+.hero-body .hero-content {
+    width: 44%;
+}
+
+.hero-content .heading {
+    color: #FFF;
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: -1.4px;
+}
+
+.hero-content .desc {
+    margin-top: 22px;
+    color: var(--font-color-p2);
+}
+
+.hero-content .row-cta {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.hero-content .row-cta .phone {
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+.hero-media {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+}
+
+.hero-media .hero-img {
+    width: 330px;
+    height: 540px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.hero-media .hero-img:last-child {
+    width: 210px;
+    height: 410px;
+}
+
+/* ====================== Service =============== */
+.service {
+    padding: 170px 0;
+}
+
+/* img-service */
+.service .desc {
+    margin: 0 auto;
+} 
+
+.service .sub-heading {
+    text-align: center;
+}
+
+
+.service .desc {
+    margin-top: 18px;
+    width: 468px;
+}
+
+.service .row-service {
+    margin-top: 70px;
+    display: flex;
+    gap: 130px;
+}
+
+
+.row-service .img-service {
+    width: 570px;
+    height: 570px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* list-service */
+.service .column-right {
+    margin: auto 0;
+}
+
+.list-service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-service {
+    padding: 21px 0 20px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.item-service:hover {
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+}
+
+.item-service .info-item {
+    margin-left: 19px;
+}
+
+.item-service .info-item .desc-info {
+    margin-top: 8px;
+    text-align: left;
+    width: 351px;
+}
+
+.btn-allservice {
+    margin-top: 55px;
+}
+
